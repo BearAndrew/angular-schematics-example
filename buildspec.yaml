@@ -19,7 +19,7 @@ phases:
       - ng build my-lib
       - cd projects/my-lib && npm run build
       - npm link dist/my-lib/
-      - ng g my-lib:component-01 --name home
+      - npm run build-config
   build:
     commands:
       # - echo testing...
