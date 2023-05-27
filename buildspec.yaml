@@ -19,9 +19,8 @@ phases:
       - ng build my-lib
       - cd projects/my-lib
       - npm run build
-      - cd ../..
-      - npm link dist/my-lib/
-      - ng g my-lib:component-01 --name home
+      - cd ../../dist/my-lib/schematics
+      - ls
   build:
     commands:
       # - echo testing...
