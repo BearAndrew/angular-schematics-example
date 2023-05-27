@@ -19,7 +19,8 @@ phases:
       - ng build my-lib
       - cd projects/my-lib
       - npm run build
-      - cd ../../dist/my-lib/schematics
+      - cd ../..
+      - pwd
       - ls
   build:
     commands:
