@@ -17,12 +17,16 @@ phases:
       - npm i -g @angular/cli
       - npm install
       - ng build my-lib
+      - echo after build my-lib
+      - pwd
       - cd projects/my-lib
       - npm run build
+      - echo after my-lib run build
+      - pwd
       - cd ../..
       - cd dist/my-lib
-      - ls
-      - cd schematics
+      - echo after cd dist/my-lib
+      - pwd
       - ls
   build:
     commands:
