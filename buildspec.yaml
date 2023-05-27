@@ -29,4 +29,4 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/aws-code-test
+  base-directory: dist/schematic-lib
