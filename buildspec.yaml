@@ -20,7 +20,9 @@ phases:
       - cd projects/my-lib
       - npm run build
       - cd ../..
-      - pwd
+      - cd dist/my-lib
+      - ls
+      - cd schematics
       - ls
   build:
     commands:
