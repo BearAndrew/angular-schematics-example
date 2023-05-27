@@ -17,17 +17,9 @@ phases:
       - npm i -g @angular/cli
       - npm install
       - ng build my-lib
-      - echo after build my-lib
-      - pwd
-      - cd projects/my-lib
-      - npm run build
-      - echo after my-lib run build
-      - pwd
-      - cd ../..
-      - cd dist/my-lib
-      - echo after cd dist/my-lib
-      - pwd
-      - ls
+      - cd projects/my-lib && npm run build
+      - npm link dist/my-lib/
+      - ng g my-lib:component-01 --name home
   build:
     commands:
       # - echo testing...
