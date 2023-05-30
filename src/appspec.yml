@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /etc/nginx/tombear
+    destination: /etc/nginx
 hooks:
   AfterInstall:
     - location: scripts/start_server
