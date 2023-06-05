@@ -3,9 +3,4 @@ os: linux
 files:
   - source: /
     destination: /etc/nginx
-hooks:
-  AfterInstall:
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
 
