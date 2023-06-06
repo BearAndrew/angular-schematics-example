@@ -24,7 +24,7 @@ const filePath = 'src/appspec.yml';
 const appspecContent = fs.readFileSync(filePath, 'utf8');
 
 // 修改檔案內容
-const modifiedContent = appspecContent.replace('/etc/nginx', '/etc/nginx/' + dir);
+const modifiedContent = appspecContent.replace('/etc/nginx/sites-available/', '/etc/nginx/sites-available/' + dir);
 
 // 寫入修改後的內容
 fs.writeFileSync(filePath, modifiedContent, 'utf8');
