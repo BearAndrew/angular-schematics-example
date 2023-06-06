@@ -6,6 +6,6 @@ files:
 hooks:
   AfterInstall:
     - location: scripts/start_server
-      timeout: 300
+      timeout: 10
       runas: root
 
