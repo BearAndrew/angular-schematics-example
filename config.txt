@@ -1,2 +1,2 @@
-test
+test2
 ng g my-lib:component-01 --name home
