@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /etc/nginx/sites-available/
+    destination: /etc/nginx/projects/
 hooks:
   AfterInstall:
     - location: scripts/start_server
