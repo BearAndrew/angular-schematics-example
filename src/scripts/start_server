@@ -1,3 +1,4 @@
 #!/bin/bash
+cp -a /etc/nginx/projects/. /etc/nginx/sites-available/
 cd /etc/init.d
 nginx -s reload
