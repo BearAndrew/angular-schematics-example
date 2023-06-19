@@ -15,9 +15,9 @@ let action;
 // 逐行执行ng指令
 commands.some((command, index) => {
   if (index === 0) {
-    dir = command;
-    action = dir.split(':')[1];
-    return !action;
+    dir = command.split(':')[0];
+    action = command.split(':')[1];
+    return action === 'false';
   } else if (command.trim() !== '' && command.startsWith('ng')) {
     execSync(command.trim(), { stdio: 'inherit' });
   }
@@ -31,7 +31,7 @@ const appspecContent = fs.readFileSync(filePath, 'utf8');
 let modifiedContent = appspecContent.replace('/etc/nginx/projects/', '/etc/nginx/projects/' + dir);
 
 // 判斷action是否為false, 是的話代表刪除該用戶資料及nginx設定
-if (action) {
+if (action === 'false') {
   //1.修改delete_user的檔案路徑
   const scriptFilePath = 'src/scripts/delete_user';
   const scriptContent = fs.readFileSync(scriptFilePath, 'utf8');
