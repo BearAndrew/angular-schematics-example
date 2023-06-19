@@ -33,7 +33,7 @@ let modifiedContent = appspecContent.replace('/etc/nginx/projects/', '/etc/nginx
 // 判斷action是否為false, 是的話代表刪除該用戶資料及nginx設定
 if (action) {
   //1.修改delete_user的檔案路徑
-  const scriptFilePath = 'src/delete_user';
+  const scriptFilePath = 'src/scripts/delete_user';
   const scriptContent = fs.readFileSync(scriptFilePath, 'utf8');
   const newScriptContent = scriptContent.replace('/etc/nginx/sites-available/', '/etc/nginx/sites-available/' + dir);
   fs.writeFileSync(scriptFilePath, newScriptContent, 'utf8');
