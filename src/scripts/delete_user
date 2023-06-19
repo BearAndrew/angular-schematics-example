@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf /etc/nginx/sites-available/
+sudo rm -rf /etc/nginx/sites-available/
