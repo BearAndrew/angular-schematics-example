@@ -1,2 +1,2 @@
-test5
+test5:false
 ng g my-lib:component-01 --name home
