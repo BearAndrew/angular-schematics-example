@@ -1,3 +1,2 @@
 test5:true
 ng g my-lib:component-01 --name home
-
