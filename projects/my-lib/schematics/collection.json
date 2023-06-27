@@ -2,9 +2,14 @@
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "component-01": {
-      "description": "A blank schematic.",
+      "description": "Generate file.",
       "factory": "./component-01/index#generate",
       "schema": "./component-01/schema.json"
+    },
+    "layout": {
+      "description": "Generate layout code.",
+      "factory": "./layout/index#modifyHtml",
+      "schema": "./layout/schema.json"
     }
   }
 }
