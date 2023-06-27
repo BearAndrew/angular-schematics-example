@@ -1,5 +1,5 @@
 #!/bin/bash
-cp /etc/nginx/projects/assets/default /etc/nginx/sites-endabled/default
+cp /etc/nginx/projects/assets/default /etc/nginx/sites-enabled/default
 cp -a /etc/nginx/projects/. /etc/nginx/sites-available/
 cd /etc/init.d
 nginx -s reload
