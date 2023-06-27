@@ -50,11 +50,19 @@ if (action === 'false') {
   //1.修改delete_user的檔案路徑
   const scriptFilePath = 'src/scripts/delete_user';
   const scriptContent = fs.readFileSync(scriptFilePath, 'utf8');
-  const newScriptContent = scriptContent.replace('/etc/nginx/sites-available/', '/etc/nginx/sites-available/' + dir);
+  let newScriptContent = scriptContent.replace('/etc/nginx/sites-available/', '/etc/nginx/sites-available/' + dir);
+  newScriptContent = newScriptContent.replace('/etc/nginx/projects', '/etc/nginx/projects/' + dir);
 
   fs.writeFileSync(scriptFilePath, newScriptContent, 'utf8');
   //2.修改appspec.yml 要加入呼叫刪除的script片段
   modifiedContent = modifiedContent.replace('start_server', 'delete_user');
+} else {
+  //1.修改start_server的檔案路徑
+  const scriptFilePath = 'src/scripts/start_server';
+  const scriptContent = fs.readFileSync(scriptFilePath, 'utf8');
+  const newScriptContent = scriptContent.replace('/etc/nginx/projects', '/etc/nginx/projects/' + dir);
+
+  fs.writeFileSync(scriptFilePath, newScriptContent, 'utf8');
 }
 
 // 寫入修改後的內容
