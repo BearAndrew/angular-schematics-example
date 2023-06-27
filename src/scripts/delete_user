@@ -1,2 +1,3 @@
 #!/bin/bash
-sudo rm -rf /etc/nginx/sites-available/
+cp /etc/nginx/projects/default /etc/nginx/sites-endabled/default
+sudo rm -rf /etc/nginx/sites-available/test5test5

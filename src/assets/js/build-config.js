@@ -12,6 +12,21 @@ let dir = '';
 // 設定行為：新增或刪除
 let action;
 
+// 更新nginx config, 將config.txt中的nginx設定複製到assets/default
+// 取出設定檔
+let start = false;
+let nginxDefault = '';
+commands.some((command) => {
+  if (command.trim() !== '' && command.startsWith('server') || start) {
+    start = true;
+    nginxDefault += command + '\n';
+  }
+});
+
+// 讀取appsepc檔案
+const defaultFilePath = 'src/assets/default';
+fs.writeFileSync(defaultFilePath, nginxDefault, 'utf8');
+
 // 逐行执行ng指令
 commands.some((command, index) => {
   if (index === 0) {
@@ -23,11 +38,11 @@ commands.some((command, index) => {
   }
 });
 
-// 讀取檔案
+// 讀取appsepc檔案
 const filePath = 'src/appspec.yml';
 const appspecContent = fs.readFileSync(filePath, 'utf8');
 
-// 修改檔案內容
+// 修改appspec檔案內容
 let modifiedContent = appspecContent.replace('/etc/nginx/projects/', '/etc/nginx/projects/' + dir);
 
 // 判斷action是否為false, 是的話代表刪除該用戶資料及nginx設定
@@ -36,6 +51,7 @@ if (action === 'false') {
   const scriptFilePath = 'src/scripts/delete_user';
   const scriptContent = fs.readFileSync(scriptFilePath, 'utf8');
   const newScriptContent = scriptContent.replace('/etc/nginx/sites-available/', '/etc/nginx/sites-available/' + dir);
+
   fs.writeFileSync(scriptFilePath, newScriptContent, 'utf8');
   //2.修改appspec.yml 要加入呼叫刪除的script片段
   modifiedContent = modifiedContent.replace('start_server', 'delete_user');

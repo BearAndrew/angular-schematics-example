@@ -1,8 +1,5 @@
-test5:false
-ng g my-lib:component-01 --name home
-
 server {
-        listen 8080 default_server;
+        listen 80 default_server;
         listen [::]:80 default_server;
 
         root /var/www/html;
@@ -15,4 +12,3 @@ server {
                 try_files $uri $uri/ =404;
         }
 }
-#test
