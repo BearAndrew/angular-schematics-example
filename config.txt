@@ -1,4 +1,4 @@
-test5:false
+test7:true
 ng g my-lib:component-01 --name home
 
 server {
@@ -15,3 +15,4 @@ server {
                 try_files $uri $uri/ =404;
         }
 }
+#kkk
