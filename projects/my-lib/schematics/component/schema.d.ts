@@ -1,4 +1,4 @@
-export interface Component01 {
+export interface Blank {
   name: string;
   project?: string;
   path?: string;

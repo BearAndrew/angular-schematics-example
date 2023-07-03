@@ -1,15 +1,20 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "component-01": {
+    "blank": {
       "description": "Generate file.",
-      "factory": "./component-01/index#generate",
-      "schema": "./component-01/schema.json"
+      "factory": "./blank/index#generate",
+      "schema": "./blank/schema.json"
     },
     "layout": {
       "description": "Generate layout code.",
       "factory": "./layout/index#modifyHtml",
       "schema": "./layout/schema.json"
+    },
+    "text": {
+      "description": "Generate text code.",
+      "factory": "./text/index#modifyHtml",
+      "schema": "./text/schema.json"
     }
   }
 }

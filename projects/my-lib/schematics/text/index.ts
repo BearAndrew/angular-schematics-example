@@ -1,21 +1,24 @@
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
-import { Layout } from './schema';
+import { Text } from './schema';
 
-export function modifyHtml(options: Layout): Rule {
+export function modifyHtml(options: Text): Rule {
   return (tree: Tree, context: SchematicContext) => {
     const filePath = `/src/app/${options.path}/${options.path}.component.html`;
     const fileContent = tree.read(filePath)?.toString('utf-8');
 
     if (fileContent) {
       // 產生 layout code
-      let girdCount = options.type == 'grid' ? `-${options.count}` : ''; // 若為 grid 需在 direction 後加上 count
-      let inversDir = options.direction == 'row' ? 'cols' : 'rows';
-      let direction = options.type == 'grid' ? inversDir : options.direction;
-      let modifiedContent = `<div class="${options.type} ${options.type}-${direction}${girdCount}">\n`;
-      for (let i = 1 ; i <= options.count; i++) {
-        modifiedContent += options.direction + '_arg' + i + '\n';
-      }
-      modifiedContent += '</div>';
+      let modifiedContent = `<${options.tag} class="
+      text-[${options.fontsize}] ${' '}
+      font-[${options.fontweight}] ${' '}
+      font-[${options.fontfamily}] ${' '}
+      text-[${options.color}] ${' '}
+      text-${options.textalign} ${' '}
+      p-[${options.padding}] ${' '}
+      m-[${options.margin}] ${' '}
+      bg-[${options.backgroundcolor}]">
+      ${options.content}
+      </${options.tag}>\n`;
 
 
       // 判斷是否要在指定字串的位置生成 code

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "Component01",
-  "title": "Component01",
+  "$id": "Blank",
+  "title": "Blank",
   "description": "Generate a file of JavaScript",
   "type": "object",
   "properties": {

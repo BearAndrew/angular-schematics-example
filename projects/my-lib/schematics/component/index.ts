@@ -7,7 +7,7 @@ import {
 import { strings, normalize, virtualFs, workspaces } from '@angular-devkit/core';
 import * as ts from 'typescript';
 import { tsquery } from '@phenomnomnominal/tsquery';
-import { Component01 } from './schema';
+import { Blank } from './schema';
 
 function createHost(tree: Tree): workspaces.WorkspaceHost {
   return {
@@ -30,7 +30,7 @@ function createHost(tree: Tree): workspaces.WorkspaceHost {
   };
 }
 
-function addImportToAppModule(options: Component01): Rule {
+function addImportToAppModule(options: Blank): Rule {
   return (tree: Tree) => {
     const text = tree.read('/src/app/app.module.ts') || [];
 
@@ -80,7 +80,7 @@ function addImportToAppModule(options: Component01): Rule {
   };
 }
 
-function addImportToAppRoutingModule(options: Component01): Rule {
+function addImportToAppRoutingModule(options: Blank): Rule {
   return (tree: Tree) => {
     const text = tree.read('/src/app/app-routing.module.ts') || [];
 
@@ -126,7 +126,7 @@ function addImportToAppRoutingModule(options: Component01): Rule {
   };
 }
 
-export function generate(options: Component01): Rule {
+export function generate(options: Blank): Rule {
   return async (tree: Tree) => {
     const host = createHost(tree);
     const { workspace } = await workspaces.readWorkspace('/', host);

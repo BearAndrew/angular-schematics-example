@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "Text",
+  "title": "Text",
+  "description": "Generate text code of target HTML file",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to modify HTML file.",
+      "visible": false
+    },
+    "tag": {
+      "type": "string",
+      "description": "HTML tag."
+    },
+    "fontsize": {
+      "type": "string",
+      "description": "Generate flex or grid."
+    },
+    "fontweight": {
+      "type": "number",
+      "description": "Font weight."
+    },
+    "fontfamily": {
+      "type": "string",
+      "description": "Font family."
+    },
+    "color": {
+      "type": "string",
+      "description": "Color."
+    },
+    "textalign": {
+      "type": "string",
+      "description": "Text align."
+    },
+    "padding": {
+      "type": "string",
+      "description": "Padding."
+    },
+    "margin": {
+      "type": "string",
+      "description": "Margin."
+    },
+    "backgroundcolor": {
+      "type": "string",
+      "description": "Background color."
+    },
+    "content": {
+      "type": "string",
+      "description": "Content string."
+    }
+  },
+  "required": [
+    "path"
+  ]
+}
