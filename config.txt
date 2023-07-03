@@ -5,7 +5,7 @@ server {
         listen 80 default_server;
         listen [::]:80 default_server;
 
-        root /etc/nginx/sites-enabled/test7;
+        root /etc/nginx/sites-available/test7;
 
         index index.html index.htm index.nginx-debian.html;
 
