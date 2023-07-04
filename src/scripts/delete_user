@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo cp /etc/nginx/projects/assets/default /etc/nginx/sites-enabled/default
+sudo rm -rf /etc/nginx/sites-available/

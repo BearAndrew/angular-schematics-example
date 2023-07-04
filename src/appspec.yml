@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /etc/nginx/projects/
+hooks:
+  AfterInstall:
+    - location: scripts/start_server
+      timeout: 10
+      runas: root
+

@@ -1,0 +1,17 @@
+test7:true
+ng g my-lib:component-01 --name home
+
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /etc/nginx/sites-available/test7;
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                try_files $uri $uri /index.html;
+        }
+}
