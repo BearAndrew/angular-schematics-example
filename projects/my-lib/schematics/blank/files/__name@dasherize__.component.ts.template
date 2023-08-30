@@ -6,5 +6,4 @@ import { Component, Input } from '@angular/core';
   styles: [`h1 { font-family: Lato; }`]
 })
 export class <%= classify(name) %>Component  {
-  name: string = 'Schematics New <%= classify(name) %>Component !';
 }
