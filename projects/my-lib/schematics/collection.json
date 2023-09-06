@@ -1,10 +1,10 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "blank": {
-      "description": "Generate file.",
-      "factory": "./blank/index#generate",
-      "schema": "./blank/schema.json"
+    "component-01": {
+      "description": "A blank schematic.",
+      "factory": "./component-01/index#generate",
+      "schema": "./component-01/schema.json"
     },
     "layout": {
       "description": "Generate layout code.",

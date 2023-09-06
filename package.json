@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-config": "node ./src/assets/js/build-config.js",
-    "mylib": "ng generate my-lib:blank --name=home && schematics my-lib:layout --path=home --direction=row --type=grid --count=1 && schematics my-lib:layout --path=home --direction=col --replace=row_arg1 --type=flex --count=1 && schematics my-lib:text --path=home --replace=col_arg1 --tag=h1 --fontsize=40px --fontweight=700 --fontfamily= --color=#000000 --textalign=center --padding=16px --margin=16px --backgroundcolor=#ffffff --content=標題標題標題 && schematics my-lib:layout --path=home --direction=row --type=grid --count=2 && schematics my-lib:layout --path=home --direction=col --replace=row_arg1 --type=flex --count=2 && schematics my-lib:text --path=home --replace=col_arg1 --tag=h2 --fontsize=32px --fontweight=500 --fontfamily= --color=#000000 --textalign=left --padding=16px --margin=16px --backgroundcolor=#ffdddd --content=副標題副標題 && schematics my-lib:text --path=home --replace=col_arg2 --tag=p --fontsize=16px --fontweight=400 --fontfamily= --color=#888888 --textalign=center --padding=8px --margin=0px --backgroundcolor=#ffffff --content=內文內文內文 && schematics my-lib:layout --path=home --direction=col --replace=row_arg2 --type=flex --count=1 && schematics my-lib:text --path=home --replace=col_arg1 --tag=h2 --fontsize=32px --fontweight=500 --fontfamily= --color=#000000 --textalign=right --padding=16px --margin=16px --backgroundcolor=#ddffdd --content=副標題副標題"
+    "mylib": "ng generate my-lib:component-01 --name=home && schematics my-lib:layout --path=home --direction=row --type=grid --count=1 && schematics my-lib:layout --path=home --direction=col --replace=row_arg1 --type=flex --count=1 && schematics my-lib:text --path=home --replace=col_arg1 --tag=h1 --fontsize=40px --fontweight=700 --fontfamily= --color=#000000 --textalign=center --padding=16px --margin=16px --backgroundcolor=#ffffff --content=標題標題標題 && schematics my-lib:layout --path=home --direction=row --type=grid --count=2 && schematics my-lib:layout --path=home --direction=col --replace=row_arg1 --type=flex --count=2 && schematics my-lib:text --path=home --replace=col_arg1 --tag=h2 --fontsize=32px --fontweight=500 --fontfamily= --color=#000000 --textalign=left --padding=16px --margin=16px --backgroundcolor=#ffdddd --content=副標題副標題 && schematics my-lib:text --path=home --replace=col_arg2 --tag=p --fontsize=16px --fontweight=400 --fontfamily= --color=#888888 --textalign=center --padding=8px --margin=0px --backgroundcolor=#ffffff --content=內文內文內文 && schematics my-lib:layout --path=home --direction=col --replace=row_arg2 --type=flex --count=1 && schematics my-lib:text --path=home --replace=col_arg1 --tag=h2 --fontsize=32px --fontweight=500 --fontfamily= --color=#000000 --textalign=right --padding=16px --margin=16px --backgroundcolor=#ddffdd --content=副標題副標題"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +31,7 @@
     "@angular/compiler-cli": "^14.2.0",
     "@phenomnomnominal/tsquery": "^5.0.1",
     "@types/jasmine": "~4.0.0",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.15",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -39,8 +39,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "ng-packagr": "^14.2.0",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3",
     "typescript": "~4.7.2"
   }
 }
