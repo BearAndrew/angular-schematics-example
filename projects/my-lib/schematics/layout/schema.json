@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "Layout",
+  "title": "Layout",
+  "description": "Generate layout code of target HTML file",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to modify HTML file.",
+      "visible": false
+    },
+    "direction": {
+      "type": "string",
+      "description": "Generate row or col."
+    },
+    "type": {
+      "type": "string",
+      "description": "Generate flex or grid."
+    },
+    "count": {
+      "type": "number",
+      "description": "Counts of direction."
+    },
+    "replace": {
+      "type": "string",
+      "description": "Replace string."
+    }
+  },
+  "required": [
+    "path",
+    "direction",
+    "type",
+    "count"
+  ]
+}

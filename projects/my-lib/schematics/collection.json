@@ -5,6 +5,16 @@
       "description": "A blank schematic.",
       "factory": "./component-01/index#generate",
       "schema": "./component-01/schema.json"
+    },
+    "layout": {
+      "description": "Generate layout code.",
+      "factory": "./layout/index#modifyHtml",
+      "schema": "./layout/schema.json"
+    },
+    "text": {
+      "description": "Generate text code.",
+      "factory": "./text/index#modifyHtml",
+      "schema": "./text/schema.json"
     }
   }
 }
